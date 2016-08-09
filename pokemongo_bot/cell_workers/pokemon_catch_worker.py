@@ -225,7 +225,6 @@ class PokemonCatchWorker(BaseTask):
             formatted='Catch rate of {catch_rate} with {ball_name} is low. Throwing {berry_name} (have {berry_count})',
             data={
                 'catch_rate': self._pct(catch_rate_by_ball[current_ball]),
-                'ball_name': self.item_list[str(current_ball)],
                 'berry_name': self.item_list[str(berry_id)],
                 'berry_count': berry_count
             }
