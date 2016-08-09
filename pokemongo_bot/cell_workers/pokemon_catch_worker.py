@@ -222,7 +222,8 @@ class PokemonCatchWorker(BaseTask):
         self.emit_event(
             'pokemon_catch_rate',
             level='debug',
-            formatted='Catch rate of {catch_rate} with {ball_name} is low. Throwing {berry_name} (have {berry_count})',
+            formatted='Catch rate of {catch_rate} is low. Maybe will throw
+            {berry_name} ({berry_count} left)',
             data={
                 'catch_rate': self._pct(catch_rate_by_ball[current_ball]),
                 'berry_name': self.item_list[str(berry_id)],
